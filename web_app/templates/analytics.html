@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Аналітика та графіки{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>📊 Аналітика каталогу фільмів</h1>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 3rem; align-items: center;">
+    {% if chart1 %}
+        <div class="table-container" style="padding: 20px; text-align: center; width: 100%; max-width: 900px;">
+            <h3>Топ-10 кінематографістів за кількістю фільмів</h3>
+            <img src="data:image/png;base64,{{ chart1 }}" alt="Графік кінематографістів" style="max-width: 100%; height: auto; margin-top: 15px;">
+        </div>
+    {% endif %}
+
+    {% if chart2 %}
+        <div class="table-container" style="padding: 20px; text-align: center; width: 100%; max-width: 900px;">
+            <h3>Розподіл бюджетів фільмів</h3>
+            <img src="data:image/png;base64,{{ chart2 }}" alt="Графік бюджетів" style="max-width: 100%; height: auto; margin-top: 15px;">
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

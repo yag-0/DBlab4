@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Журнал аудиту{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>📋 Журнал дій (Аудит)</h1>
+</div>
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Користувач</th>
+                <th>Дія</th>
+                <th>Таблиця</th>
+                <th>ID запису</th>
+                <th>Деталі</th>
+                <th>Час</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log[0] }}</td>
+                <td>{{ log[1] or 'Система' }}</td>
+                <td><b>{{ log[2] }}</b></td>
+                <td>{{ log[3] }}</td>
+                <td>{{ log[4] }}</td>
+                <td>{{ log[5] }}</td>
+                <td>{{ log[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

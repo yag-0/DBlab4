@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Користувачі системи{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>👥 Список користувачів системи</h1>
+</div>
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Користувач (Username)</th>
+                <th>Email</th>
+                <th>Роль</th>
+                <th>Дата створення</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td>{{ u[0] }}</td>
+                <td>{{ u[1] }}</td>
+                <td>{{ u[2] }}</td>
+                <td><span style="background: #3498db; color: white; padding: 3px 8px; border-radius: 4px;">{{ u[3] }}</span></td>
+                <td>{{ u[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

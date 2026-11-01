@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Кінематографісти та статистика{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>🏆 Статистика кінематографістів</h1>
+</div>
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Ім'я та Прізвище</th>
+                <th>Країна</th>
+                <th>Кількість фільмів</th>
+                <th>Сер. бюджет ($)</th>
+                <th>Сер. рейтинг</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for author in authors %}
+            <tr>
+                <td>{{ author[1] }}</td>
+                <td>{{ author[2] }}</td>
+                <td>{{ author[3] }}</td>
+                <td>{{ "{:,.2f}".format(author[4]) if author[4] != none else "0.00" }}</td>
+                <td>{{ author[8] if author[8] != none else "N/A" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

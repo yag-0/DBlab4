@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Головна - Кінокаталог{% endblock %}
+{% block content %}
+<div class="page-header" style="text-align: center; display: block;">
+    <h1>Вітаємо у Системі управління кінокаталогом! 🎥</h1>
+    <p style="margin-top: 1rem; color: #666; font-size: 1.1rem;">Використовуйте навігацію зверху для перегляду фільмів, знімальної групи та аналітичних звітів.</p>
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('movies') }}" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2rem;">Перейти до каталогу фільмів</a>
+    </div>
+</div>
+{% endblock %}

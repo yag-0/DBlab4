@@ -23,7 +23,7 @@
 
 ## Концептуальна модель
 Концептуальна схема проєкту розроблена у вигляді ER-діаграми, яка відображає зв'язки між сутностями «Фільми», «Особи», «Ролі», «Користувачі» та «Логи аудиту» у нотации сутність-зв'язок (Entity-Relationship).
-![alt text](report/image.png)
+![alt text](image.png)
 
 ## Логічна схема
 Логічна структура реляційної бази даних складається з таких нормалізованих таблиць та зв'язків:
@@ -145,17 +145,17 @@ INNER JOIN roles r ON mc.role_id = r.role_id
 ORDER BY m.title, r.name;
 ```
 ## Консольний застосунок
-![alt text](report/image-1.png)
-![alt text](report/image-2.png)
-![alt text](report/image-3.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 ## Вебзастосунок 
-![alt text](report/image-4.png)
-![alt text](report/image-5.png)
-![alt text](report/image-6.png)
-![alt text](report/image-7.png)
-![alt text](report/image-8.png)
-![alt text](report/image-9.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
 ![alt text](image-10.png)
 
 ## Розширена функціональність 
